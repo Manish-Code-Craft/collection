@@ -1,141 +1,92 @@
+/*-------------------------------------
+  Base Card Styles
+-------------------------------------*/
 .service-card {
-    padding: 40px;
     position: relative;
-    z-index: 2;
-    box-shadow: 0px 10px 30px rgba(8,14,28,.06);
+    padding: 40px;
     background-color: #ffffff;
     border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(8, 14, 28, 0.06);
     overflow: hidden;
-    -webkit-transition: .4s ease-in-out;
-    transition: .4s ease-in-out
-  }
-  
-  .service-card:before,.service-card:after {
+    z-index: 2;
+    transition: 0.4s ease-in-out;
+}
+
+/* Pseudo Elements */
+.service-card::before,
+.service-card::after {
     content: '';
     position: absolute;
     height: 110px;
     width: 110px;
     background-color: #684df4;
-    opacity: .6;
+    opacity: 0.6;
     border-radius: 50%;
-    -webkit-transition: .4s ease-in-out;
-    transition: .4s ease-in-out;
-    z-index: -1
-  }
-  
-  .service-card:before {
+    z-index: -1;
+    transition: 0.4s ease-in-out;
+}
+
+.service-card::before {
     bottom: -73px;
-    right: -28px
-  }
-  
-  .service-card:after {
+    right: -28px;
+}
+
+.service-card::after {
     right: -73px;
-    bottom: -28px
-  }
-  
-  .service-card .shape-icon {
-    margin-bottom: 30px
-  }
-  
-  .service-card .box-title a:hover {
-    color: #e2e8fa
-  }
-  
-  .service-card .bg-shape {
-    position: absolute;
-    bottom: -200px;
-    left: 0;
+    bottom: -28px;
+}
+
+/* Hover Effects */
+.service-card:hover {
     width: 100%;
-    opacity: 0;
-    -webkit-transition: .4s ease-in-out;
-    transition: .4s ease-in-out;
-    pointer-events: none
-  }
-  
-  .service-card .bg-shape img {
-    width: 100%
-  }
-  
-  .service-card_number {
-    position: absolute;
-    top: 25px;
-    right: 40px;
-    font-size: 100px;
-    line-height: 1;
-    font-weight: 700;
-    color: #e2e8fa;
-    opacity: .3
-  }
-  
-  .service-card_text {
-    -webkit-transition: .4s ease-in-out;
-    transition: .4s ease-in-out;
-    margin-bottom: 22px
-  }
-  
-  .service-card .th-btn {
-    background-color: #e2e8fa;
-    color: var(--title-color);
-    padding: 12.5px 20px;
-    box-shadow: none
-  }
-  
-  .service-card .th-btn:before,.service-card .th-btn:after {
-    background-color: #e2e8fa
-  }
-  
-  .service-card:hover {
-    width: 100%
-  }
-  
-  .service-card:hover:before,.service-card:hover:after {
+}
+
+.service-card:hover::before,
+.service-card:hover::after {
     opacity: 1;
     height: 120%;
     width: 120%;
-    border-radius: 0
-  }
-  
-  .service-card:hover .shape-icon:before {
-    background-color: #ffffff
-  }
-  
-  .service-card:hover .bg-shape {
+    border-radius: 0;
+}
+
+.service-card:hover .shape-icon::before {
+    background-color: #ffffff;
+}
+
+.service-card:hover .bg-shape {
     bottom: 0;
-    opacity: 1
-  }
-  
-  .service-card:hover .box-title {
-    color: #ffffff
-  }
-  
-  .service-card:hover .th-btn {
-    background-color: #ffffff
-  }
-  
-  .service-card:hover .service-card_text {
-    color: #ffffff
-  }
-  
-  .service-card .bg-shape {
-    position: absolute;
-    bottom: -200px;
-    left: 0;
-    width: 100%;
-    opacity: 0;
-    -webkit-transition: .4s ease-in-out;
-    transition: .4s ease-in-out;
-    pointer-events: none
-  }
-  
-  .service-card .bg-shape img {
-    width: 100%
-  }
-  .service-card:hover .bg-shape {
-    bottom: 0;
-    opacity: 1
-  }
-  
-  .service-card_number {
+    opacity: 1;
+}
+
+.service-card:hover .box-title {
+    color: #ffffff;
+}
+
+.service-card:hover .th-btn {
+    background-color: #ffffff;
+}
+
+.service-card:hover .service-card_text {
+    color: #ffffff;
+}
+
+/*-------------------------------------
+  Card Content
+-------------------------------------*/
+.service-card .shape-icon {
+    margin-bottom: 30px;
+}
+
+.service-card .box-title a:hover {
+    color: #e2e8fa;
+}
+
+.service-card_text {
+    margin-bottom: 22px;
+    transition: 0.4s ease-in-out;
+}
+
+.service-card_number {
     position: absolute;
     top: 25px;
     right: 40px;
@@ -143,63 +94,100 @@
     line-height: 1;
     font-weight: 700;
     color: #e2e8fa;
-    opacity: .3
-  }
-  
-  
-  .shape-icon {
+    opacity: 0.3;
+}
+
+/*-------------------------------------
+  Button
+-------------------------------------*/
+.service-card .th-btn {
+    background-color: #e2e8fa;
+    color: var(--title-color);
+    padding: 12.5px 20px;
+    box-shadow: none;
+}
+
+.service-card .th-btn::before,
+.service-card .th-btn::after {
+    background-color: #e2e8fa;
+}
+
+/*-------------------------------------
+  Background Shape
+-------------------------------------*/
+.service-card .bg-shape {
+    position: absolute;
+    bottom: -200px;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s ease-in-out;
+}
+
+.service-card .bg-shape img {
+    width: 100%;
+}
+
+/*-------------------------------------
+  Shape Icon
+-------------------------------------*/
+.shape-icon {
     position: relative;
     z-index: 2;
     width: 90px;
     height: 85px;
     line-height: 85px;
-    text-align: center
-  }
-  
-  .shape-icon:before {
+    text-align: center;
+}
+
+.shape-icon::before {
     content: '';
     position: absolute;
     inset: 0;
     background-color: #e2e8fa;
-    -webkit-clip-path: path("M4.76563 19.2144C-2.32686 32.07 -1.20075 48.6639 6.14105 61.3767C16.4024 79.1459 38.9816 89.016 58.6174 83.4451C78.2532 77.8741 92.5688 56.7417 89.6127 36.3982C84.2306 -0.647078 23.3991 -14.559 4.76563 19.2144Z");
     clip-path: path("M4.76563 19.2144C-2.32686 32.07 -1.20075 48.6639 6.14105 61.3767C16.4024 79.1459 38.9816 89.016 58.6174 83.4451C78.2532 77.8741 92.5688 56.7417 89.6127 36.3982C84.2306 -0.647078 23.3991 -14.559 4.76563 19.2144Z");
     z-index: -1;
-    -webkit-transition: .4s ease-in-out;
-    transition: .4s ease-in-out
-  }
-  
-  .shape-icon .dots:before,.shape-icon .dots:after {
+    transition: 0.4s ease-in-out;
+}
+
+/* Dots Inside Shape Icon */
+.shape-icon .dots::before,
+.shape-icon .dots::after {
     content: '';
     position: absolute;
     background-color: #684df4;
+    border-radius: 50%;
+}
+
+.shape-icon .dots::before {
+    top: 0;
+    right: 9px;
     height: 24px;
     width: 23px;
-    border-radius: 50%
-  }
-  
-  .shape-icon .dots:before {
-    top: 0;
-    right: 9px
-  }
-  
-  .shape-icon .dots:after {
+}
+
+.shape-icon .dots::after {
+    bottom: 0;
+    left: 27px;
     height: 12px;
     width: 11px;
-    bottom: 0;
-    left: 27px
-  }
+}
 
-  .box-title {
+/*-------------------------------------
+  Box Title
+-------------------------------------*/
+.box-title {
     font-size: 24px;
     line-height: 1.417;
     font-weight: 700;
-    margin-top: -.32em
+    margin-top: -0.32em;
 }
 
 .box-title a {
-    color: inherit
+    color: inherit;
 }
 
 .box-title a:hover {
-    color: #684df4
+    color: #684df4;
 }
