@@ -26,3 +26,141 @@ body {
 }
 
 
+
+/* >>>>>>>Btn<<<<<<<< */
+.btn-anim {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  vertical-align: middle;
+  display: inline-block;
+  border: none;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #684df4;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  padding: 20.5px 20px;
+  min-width: 144px;
+  border-radius: 4px
+}
+
+.btn-anim:before,.btn-anim:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #141d38;
+  z-index: -1;
+  -webkit-transition: all .4s ease-out;
+  transition: all .4s ease-out;
+  border-radius: 99px;
+  -webkit-transform: scaleY(1.1);
+  -ms-transform: scaleY(1.1);
+  transform: scaleY(1.1)
+}
+
+.btn-anim:before {
+  -webkit-transform: scaleY(0);
+  -ms-transform: scaleY(0);
+  transform: scaleY(0)
+}
+
+.btn-anim:after {
+  -webkit-transform: scaleY(0);
+  -ms-transform: scaleY(0);
+  transform: scaleY(0)
+}
+
+.btn-anim:hover,.btn-anim.active {
+  color: #fff;
+  box-shadow: none
+}
+
+.btn-anim:hover:before,.btn-anim:hover:after,.btn-anim.active:before,.btn-anim.active:after {
+  border-radius: 0;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1)
+}
+
+
+
+
+.ep-team-section .team-item {
+  border: 1px solid #CCCCCC;
+  border-radius: 20px;
+  transition: all 0.3s ease-out 0s;
+  padding: 50px 40px;
+  position: relative;
+}
+
+.ep-team-section .team-item .team-name-info {
+  position: relative
+}
+
+.ep-team-section .team-item .team-name-info .name {
+  color: #020842;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 36px;
+  margin-bottom: 10px
+}
+
+.ep-team-section .team-item .social-icon-box {
+  margin-left: 40px;
+  position: relative;
+  z-index: 99
+}
+
+.ep-team-section .team-item .hover-image {
+  max-width: 300px;
+  right: 78px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-15deg);
+  visibility: hidden;
+  opacity: 0;
+  z-index: 9;
+  transition: all 0.3s ease-out 0s;}
+
+.ep-team-section .team-item:hover {
+  background-color: #fff
+}
+
+.ep-team-section .team-item:hover .hover-image {
+  visibility: visible;
+  opacity: 1
+}
+
+.ep-team-section .team-item:hover .social-icon-box a {
+  background-color: #fff
+}
+
+.ep-team-section .team-item:hover .social-icon-box a:hover {
+  background-color: var(--bs-primary-color)
+}
+
+.ep-team-section .active-team .hover-image {
+  visibility: visible;
+  opacity: 1
+}
+
+.ep-team-section .team-item+.team-item {
+  margin-top: 60px
+}
+
+.ep-team-section .all-members {
+  margin-top: 80px
+}
+
+
+.ep-team-section .hover-image {
+  max-width: 300px;
+  position: absolute;
+  transition: transform 0.2s ease-out, opacity 0.3s ease;
+  pointer-events: none;
+}

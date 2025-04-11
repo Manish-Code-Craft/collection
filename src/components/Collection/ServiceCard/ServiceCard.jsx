@@ -1,12 +1,13 @@
 // components/ServiceCards.jsx
+import Container from "@/components/Layout/Container";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function ServiceCards({ services }) {
   return (
     <div className="section-bottom">
-      
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <Container>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <div
               key={index}
@@ -59,8 +60,8 @@ export default function ServiceCards({ services }) {
               </div>
             </div>
           ))}
-        </div>
-      
+      </div>
+      </Container>
     </div>
   );
 }

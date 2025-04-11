@@ -1,7 +1,8 @@
-import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 import Layout from "@/components/Layout/layout";
 import ServiceCard from "@/components/Collection/ServiceCard/ServiceCard";
+import ImageSection from "@/components/Collection/ImageSection/ImageSection";
+import TeamMember from "@/components/Team/TeamMember";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,6 +42,49 @@ const services = [
  
 ];
 
+const teamMembersData = [
+  {
+    name: "Manish",
+    description: "Web Development",
+    image: "/3.png",
+    socials: {
+      facebook: "#",
+      pinterest: "#",
+      linkedin: "#",
+      instagram: "#",
+    },
+  },
+  {
+    name: "Rajeev",
+    description: "Web Development",
+    image: "/2.png",
+    socials: {
+      facebook: "#",
+      linkedin: "#",
+    },
+  },
+  {
+    name: "Abhishek",
+    description: "UI/UX Designer",
+    image: "/1.png",
+    socials: {
+      instagram: "#",
+      pinterest: "#",
+    },
+  },
+  {
+    name: "Andaz",
+    description: "Full Stack Developer",
+    image: "/team-img-4.webp",
+    socials: {
+      facebook: "#",
+      linkedin: "#",
+      instagram: "#",
+    },
+  },
+];
+
+
 export default function Home() {
   return (
     <>
@@ -51,6 +95,14 @@ export default function Home() {
 
     <div className="pt-[100px]">
       <ServiceCard services={services}/>
+    </div>
+
+    <div className="pt-[100px]">
+      <ImageSection/>
+    </div>
+
+    <div className="py-20 bg-indigo-100">
+    <TeamMember members={teamMembersData} />
     </div>
     </>
   );
