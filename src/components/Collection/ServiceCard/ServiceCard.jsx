@@ -10,21 +10,21 @@ export default function ServiceCards({ services }) {
           {services.map((service, index) => (
             <div
               key={index}
-              className="service-card elementor-box p-6 rounded-xl shadow-md relative bg-white"
+              className="service-card  p-6 rounded-xl shadow-md relative bg-white"
             >
               <div className="service-card_number text-3xl font-bold text-primary mb-4">
                 {service.number}
               </div>
 
-              <div className="shape-icon relative mb-4">
+              <div className="shape-icon flex items-center justify-center relative mb-4">
                 <Image
                   width={1000}
                   height={1000}
                   src={service.icon}
                   alt={service.title}
-                  className="w-16 h-16 object-contain"
+                  className="w-10 h-10 object-contain"
                 />
-                <span className="dots absolute top-0 right-0 w-2 h-2 bg-gray-400 rounded-full"></span>
+                <span className="dots "></span>
               </div>
 
               <h3 className="box-title text-xl font-semibold mb-2">

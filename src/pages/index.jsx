@@ -23,7 +23,7 @@ const services = [
     bgShape: "/service_card_bg.webp",
   },
   {
-    number: "01",
+    number: "02",
     icon: "/icon.svg",
     title: "Web Development",
     link: "/#",
@@ -31,7 +31,7 @@ const services = [
     bgShape: "/service_card_bg.webp",
   },
   {
-    number: "01",
+    number: "03",
     icon: "/icon.svg",
     title: "Web Development",
     link: "/#",
