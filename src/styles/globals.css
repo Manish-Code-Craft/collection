@@ -164,3 +164,23 @@ body {
   transition: transform 0.2s ease-out, opacity 0.3s ease;
   pointer-events: none;
 }
+
+.team-item .team-name-info {
+  transition: all 0.3s ease-out;
+  transform: translateX(0) ;
+}
+
+.team-item:hover .team-name-info {
+  transform: translateX(30px) ;
+  color: #da1ae8;
+  font-weight: 700;
+}
+
+.team-item .social-icon-box {
+  transition: all 0.3s ease-out;
+  transform: scale(1) ;
+}
+
+.team-item:hover .social-icon-box {
+  transform: scale(1.1) ;
+}

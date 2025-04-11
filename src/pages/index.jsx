@@ -60,7 +60,9 @@ const teamMembersData = [
     image: "/2.png",
     socials: {
       facebook: "#",
+      pinterest: "#",
       linkedin: "#",
+      instagram: "#",
     },
   },
   {
@@ -68,16 +70,19 @@ const teamMembersData = [
     description: "UI/UX Designer",
     image: "/1.png",
     socials: {
-      instagram: "#",
+      facebook: "#",
       pinterest: "#",
+      linkedin: "#",
+      instagram: "#",
     },
   },
   {
     name: "Andaz",
     description: "Full Stack Developer",
-    image: "/team-img-4.webp",
+    image: "/4.png",
     socials: {
       facebook: "#",
+      pinterest: "#",
       linkedin: "#",
       instagram: "#",
     },
